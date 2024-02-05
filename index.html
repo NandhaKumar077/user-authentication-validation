@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validate Registration & Login form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="RegisterForm" onsubmit="ValidateForm(event)">
+        <h2 id="sucessMessage"></h2>
+        <label for="name">Name :</label>
+        <input type="text" name="name" id="name"  oninput="clearFieldStyles(event)"/>
+        <p id="nameerror" class="error_message"></p>
+        <label for="email">Email Id :</label>
+        <input type="text" name="email" id="email" oninput="clearFieldStyles(event)"/>
+        <p id="emailerror" class="error_message"></p>
+        <label for="password">Password :</label>
+        <input type="password" name="password" id="password" oninput="clearFieldStyles(event)"/>
+        <p id="passworderror" class="error_message"></p>
+        <div>
+            <button type="submit">Register</button>
+            <button type="button" onclick="toggleSection()">Login</button>
+        </div>
+    </form>
+    <form id='LoginForm'onsubmit='userValidation(event)' style="display: none;">
+        <p id="loginMessage"></p>
+        <label for="email">Email Id :</label>
+        <input type="text" name="email" id="loginEmail" oninput="clearFieldStyles(event)"/>
+        <p id="emailerror" class="error_message"></p>
+        <label for="password">Password :</label>
+        <input type="password" name="password" id="loginPassword" oninput="clearFieldStyles(event)"/>
+        <p id="emailerror" class="error_message"></p>
+        <button type="submit">Login</button>
+
+        <script src="script.js"></script>
+    </form>
+</body>
+</html>
